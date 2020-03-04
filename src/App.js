@@ -10,6 +10,7 @@ class App extends Component{
     }
   }
 
+  //after render method is called , this method will call next.
   componentDidMount() {
     const url = "https://jsonplaceholder.typicode.com/posts";
     fetch(url)
@@ -17,6 +18,7 @@ class App extends Component{
         .then(json =>this.setState({posts: json}))
   }
 
+  //main method , from the very first render() method is called
   render() {
     const { posts } = this.state;
    return(
